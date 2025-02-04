@@ -8,7 +8,7 @@ export class Helpers {
   
     constructor(page: Page) {
       this.page = page
-      this.searchField = page.getByRole('searchbox', { name: 'Search digital collections' });
+      this.searchField = page.getByRole('searchbox', { name: 'Search digital collections' })
       this.clickSearchButton = page.getByRole('button', { name: 'Search the site'})
     }
 
@@ -23,9 +23,9 @@ export class Helpers {
             const searchField = this.searchField
             await searchField.waitFor({ state: 'visible' })
             
-            console.log("Typing search term...");
-            await searchField.fill(searchTerm); // Mimic real typing
-            console.log(`Entered search term: ${searchTerm}`);
+            console.log("Typing search term...")
+            await searchField.fill(searchTerm) // Mimic real typing
+            console.log(`Entered search term: ${searchTerm}`)
     }
 
     async click() {
@@ -36,10 +36,10 @@ export class Helpers {
         const isEnabled = await searchButton.isEnabled()
         
         if (!isEnabled) {
-            throw new Error("Search button is disabled and cannot be clicked.");
+            throw new Error("Search button is disabled and cannot be clicked.")
         }
     
-        console.log("Clicking the search button...");
+        console.log("Clicking the search button...")
        
         await searchButton.click(), { 
             timeout: 200000,

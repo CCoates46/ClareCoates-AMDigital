@@ -22,9 +22,9 @@ When('user selects to filter the search results by collection', { timeout: 40000
         if (error instanceof Error) {
             console.error('Error occurred during checkbox verification:', error.message);
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 
     await this.search.applyFilters()
@@ -42,23 +42,23 @@ Then('the assets listed meet the search and filter criteria:', async function (d
 
     // Verify the search term
     try {
-        const searchTermTag = this.search.searchTerms;
+        const searchTermTag = this.search.searchTerms
     
-        await expect(searchTermTag).toHaveCount(1);
+        await expect(searchTermTag).toHaveCount(1)
     
-        const actualText = await searchTermTag.textContent();
-        console.log('Actual Text:', actualText.trim());
+        const actualText = await searchTermTag.textContent()
+        console.log('Actual Text:', actualText.trim())
     
-        expect(actualText.trim()).toBe(expectedSearchTerm);
+        expect(actualText.trim()).toBe(expectedSearchTerm)
     
-        console.log('Search term is present and matches the expected value.');
+        console.log('Search term is present and matches the expected value.')
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during search term verification:', error.message);
+            console.error('Error occurred during search term verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 
     // verify the Collection filtered by
@@ -68,34 +68,34 @@ Then('the assets listed meet the search and filter criteria:', async function (d
 
         await expect(collectionTermTag).toHaveCount(1)
 
-        const actualCollection = await collectionTermTag.textContent();
-        console.log('Actual Collection Text:', actualCollection.trim());
+        const actualCollection = await collectionTermTag.textContent()
+        console.log('Actual Collection Text:', actualCollection.trim())
     
-        expect(actualCollection.trim()).toBe(expectedCollectionFilteredBy);
+        expect(actualCollection.trim()).toBe(expectedCollectionFilteredBy)
 
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during collections verification:', error.message);
+            console.error('Error occurred during collections verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 
     // verify the number of results
     try {
         const totalResults = await this.search.paginationResults.textContent()
         console.log(totalResults)
-        const actualResultCount = parseInt(totalResults.split('of ')[1]);
-        console.log('Actual search result count:', actualResultCount);
+        const actualResultCount = parseInt(totalResults.split('of ')[1])
+        console.log('Actual search result count:', actualResultCount)
         expect(actualResultCount).toBe(expectedResultCount)
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during total results verification:', error.message);
+            console.error('Error occurred during total results verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 
     // Verify the title of asset is listed
@@ -110,10 +110,10 @@ Then('the assets listed meet the search and filter criteria:', async function (d
         expect(actualTitle.trim()).toBe(expectedTitle)
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during asset title verification:', error.message);
+            console.error('Error occurred during asset title verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 })

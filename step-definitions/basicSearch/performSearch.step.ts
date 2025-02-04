@@ -38,38 +38,38 @@ Then('the assets listed meet the search criteria:', async function (dataTable: D
 
     // Verify the search term
     try {
-        const searchTermTag = this.search.searchTerms;
+        const searchTermTag = this.search.searchTerms
     
-        await expect(searchTermTag).toHaveCount(1);
+        await expect(searchTermTag).toHaveCount(1)
     
-        const actualText = await searchTermTag.textContent();
-        console.log('Actual Text:', actualText.trim());
+        const actualText = await searchTermTag.textContent()
+        console.log('Actual Text:', actualText.trim())
     
-        expect(actualText.trim()).toBe(expectedSearchTerm);
+        expect(actualText.trim()).toBe(expectedSearchTerm)
     
-        console.log('Search term is present and matches the expected value.');
+        console.log('Search term is present and matches the expected value.')
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during search term verification:', error.message);
+            console.error('Error occurred during search term verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 
     // verify the number of results
     try {
         const totalResults = await this.search.paginationResults.textContent()
-        const actualResultCount = parseInt(totalResults.split('of ')[1]);
-        console.log('Actual search result count:', actualResultCount);
+        const actualResultCount = parseInt(totalResults.split('of ')[1])
+        console.log('Actual search result count:', actualResultCount)
         expect(actualResultCount).toBe(expectedResultCount)
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during total results verification:', error.message);
+            console.error('Error occurred during total results verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 
     // Verify the title of asset is listed
@@ -84,11 +84,11 @@ Then('the assets listed meet the search criteria:', async function (dataTable: D
         expect(actualTitle.trim()).toBe(expectedTitle)
     } catch (error: unknown) {
         if (error instanceof Error) {
-            console.error('Error occurred during asset title verification:', error.message);
+            console.error('Error occurred during asset title verification:', error.message)
         } else {
-            console.error('An unknown error occurred');
+            console.error('An unknown error occurred')
         }
-        throw error; // Re-throw the error to allow the test to fail
+        throw error // Re-throw the error to allow the test to fail
     }
 })
 
