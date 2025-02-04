@@ -29,7 +29,7 @@ Then('user has navigated to a Timeline content block', { timeout: 50000 }, async
         throw error // Re-throw the error to allow the test to fail
     }
 
-    // scrolls to date in timeline and selects hyperlink
+    // scrolls to date in timeline 
 
     await this.timeline.scrollToDate()
 })
@@ -48,6 +48,6 @@ Then('the correct webpage is launched in a new tab', async function () {
         await newPage.waitForLoadState()
     
         // Perform actions/assertions on the new tab
-        console.log(await newPage.title());  // Example: Print the new page title
+        console.log(await newPage.title()) 
         await expect(newPage).toHaveURL(/\/Documents\/Detail\/\d+/)
 })
