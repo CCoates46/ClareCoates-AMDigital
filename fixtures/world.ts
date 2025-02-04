@@ -2,6 +2,7 @@ import { setWorldConstructor, Before, After } from '@cucumber/cucumber'
 import { Page, Browser, chromium, firefox, webkit } from 'playwright'
 import { Helpers } from '../utils/helpers'
 import { Search } from '../utils/search'
+import { Timeline } from '../utils/timeline'
 
 class CustomWorld {
 
@@ -9,12 +10,14 @@ class CustomWorld {
   public browser: Browser
   public helpers: Helpers
   public search: Search
+  public timeline: Timeline
 
   constructor() {
     this.page = null!
     this.browser = null!
     this.helpers = null!
     this.search = null!
+    this.timeline = null!
   }
 
   // Async function to handle the browser launch and page creation
@@ -40,9 +43,10 @@ class CustomWorld {
       // Now that the browser is launched, create a new page
       this.page = await this.browser.newPage()
 
-      // Initialize the Helpers and Search(POM) with the page objects
+      // Initialize the (POM) with the page objects
       this.helpers = new Helpers(this.page)
       this.search = new Search(this.page)
+      this.timeline = new Timeline(this.page)
 
     } catch (error) {
       console.error('Error launching the browser:', error)
@@ -105,4 +109,4 @@ After(async function (this: CustomWorld) {
   } catch (err) {
     console.error('Error in After hook:', err)
   }
-});
+})

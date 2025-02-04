@@ -1,4 +1,4 @@
-import { Frame, FrameLocator, Locator, Page } from "@playwright/test"
+import { Locator, Page } from "@playwright/test"
 
 export class Search {
    
@@ -24,8 +24,8 @@ export class Search {
       this.collectionsFilter = this.page.locator('ul.tag-group__list .related-search-term-tag').filter({ hasText: 'Interwar Periodicals' })
     }
 
-    async clickCookieBanner() {
-      const frame = this.page.frame({ url: 'https://demo.quartexcollections.com/documents?returning=true' })
+    async clickCookieBanner(url: string) {
+      const frame = this.page.frame({ url: url })
 
       if (frame) {
         await frame.locator('.cc-btn.cc-dismiss').click()
@@ -36,8 +36,11 @@ export class Search {
       const formattedFilterName = `chk-box-${filterName.replace(/\s+/g, '-').toLowerCase()}`
 
       const checkbox = this.page.locator(`#${formattedFilterName}`)
+      console.log('am i here')
+      console.log(checkbox)
       
       const isEnabled = await checkbox.isEnabled()
+      console.log(isEnabled)
       
       if(!isEnabled){
         console.log(`checkbox is disabled`)

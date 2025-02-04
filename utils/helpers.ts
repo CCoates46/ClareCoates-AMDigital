@@ -5,11 +5,15 @@ export class Helpers {
     private readonly page: Page
     readonly searchField: Locator
     readonly clickSearchButton: Locator
+    readonly clickDiscoveryAidsMenu: Locator
+    readonly selectATimelineContent: Locator
   
     constructor(page: Page) {
       this.page = page
       this.searchField = page.getByRole('searchbox', { name: 'Search digital collections' })
       this.clickSearchButton = page.getByRole('button', { name: 'Search the site'})
+      this.clickDiscoveryAidsMenu = page.getByRole('button', { name: 'Discovery Aids' })
+      this.selectATimelineContent = page.getByText("The Brownings: A Brief History")
     }
 
     async goto() {
@@ -45,6 +49,14 @@ export class Helpers {
             timeout: 200000,
             waitUntil: 'domcontentloaded'
             }
+    }
+
+    async clickDiscoveryAids() {
+        await this.clickDiscoveryAidsMenu.click()
+    }
+
+    async clickContentBlock() {
+        await this.selectATimelineContent.click()
     }
 
     async performingASearch() {
