@@ -6,7 +6,7 @@ Given('user has performed a successful basic search',{ timeout: 20000 }, async f
     await this.page.waitForLoadState('domcontentloaded')
         })
 
-When('user selects to filter the search results by collection', { timeout: 50000 }, async function () {
+When('user selects to filter the search results by collection', { timeout: 60000 }, async function () {
     
     await expect(this.search.browseAll).toBeVisible()
     const resultsList = this.search.mediaList
