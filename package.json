@@ -1,0 +1,30 @@
+{
+  "name": "clarecoates-amdigital",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CCoates46/ClareCoates-AMDigital.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CCoates46/ClareCoates-AMDigital/issues"
+  },
+  "homepage": "https://github.com/CCoates46/ClareCoates-AMDigital#readme",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.50.1",
+    "playwright-cucumber": "^1.0.15",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "playwright": "^1.50.1",
+    "typescript": "^5.7.3"
+  }
+}

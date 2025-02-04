@@ -1,0 +1,234 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "basic-search;perform-a-basic-search",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Perform a basic Search",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 582361500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "user is on any page of the Quartex Published Site",
+            "match": {
+              "location": "step-definitions/basicSearch/performSearch.step.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3747902583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "user enters valid search term in the basic search input box",
+            "match": {
+              "location": "step-definitions/basicSearch/performSearch.step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52733624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "the search button is clicked",
+            "match": {
+              "location": "step-definitions/basicSearch/performSearch.step.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2605330625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "user is navigated to the Browse All page",
+            "match": {
+              "location": "step-definitions/basicSearch/performSearch.step.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 378678625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "the first page of search results is displayed",
+            "match": {
+              "location": "step-definitions/basicSearch/performSearch.step.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1882152874
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Search term",
+                      "Number of search results",
+                      "Title of asset listed"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Brown",
+                      "59",
+                      "1 April 1875. Browning, Robert to Pollock, Lady."
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "And ",
+            "line": 10,
+            "name": "the assets listed meet the search criteria:",
+            "match": {
+              "location": "step-definitions/basicSearch/performSearch.step.ts:32"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 58675750
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 28579166
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test1",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "basic-search;filter-search-results",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "Filter Search Results",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 455471832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 16,
+            "name": "user has performed a successful basic search",
+            "match": {
+              "location": "step-definitions/basicSearch/filterSearchResults.step.ts:4"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7320749959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "user selects to filter the search results by collection",
+            "match": {
+              "location": "step-definitions/basicSearch/filterSearchResults.step.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4054503708
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "Search term",
+                      "Collection filtered by",
+                      "Number of search results",
+                      "Title of asset listed"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "Brown",
+                      "Interwar Periodicals",
+                      "13",
+                      "Woman's Weekly, July-December 1919"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "the assets listed meet the search and filter criteria:",
+            "match": {
+              "location": "step-definitions/basicSearch/filterSearchResults.step.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 43366749
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 19696749
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@test2",
+            "line": 14
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "basic-search",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Basic Search",
+    "tags": [],
+    "uri": "features/basicSearch.feature"
+  }
+]
