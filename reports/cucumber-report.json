@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 638998708
+              "duration": 704339374
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3691703459
+              "duration": 3616476249
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 6,
             "name": "user enters valid search term in the basic search input box",
             "match": {
-              "location": "step-definitions/basicSearch/performSearch.step.ts:9"
+              "location": "step-definitions/basicSearch/performSearch.step.ts:10"
             },
             "result": {
               "status": "passed",
-              "duration": 53816917
+              "duration": 52679375
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 7,
             "name": "the search button is clicked",
             "match": {
-              "location": "step-definitions/basicSearch/performSearch.step.ts:13"
+              "location": "step-definitions/basicSearch/performSearch.step.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 3390193124
+              "duration": 2865831624
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 8,
             "name": "user is navigated to the Browse All page",
             "match": {
-              "location": "step-definitions/basicSearch/performSearch.step.ts:17"
+              "location": "step-definitions/basicSearch/performSearch.step.ts:18"
             },
             "result": {
               "status": "passed",
-              "duration": 401625167
+              "duration": 372804000
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 9,
             "name": "the first page of search results is displayed",
             "match": {
-              "location": "step-definitions/basicSearch/performSearch.step.ts:22"
+              "location": "step-definitions/basicSearch/performSearch.step.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 1885761875
+              "duration": 1882246999
             }
           },
           {
@@ -107,11 +107,11 @@
             "line": 10,
             "name": "the assets listed meet the search criteria:",
             "match": {
-              "location": "step-definitions/basicSearch/performSearch.step.ts:32"
+              "location": "step-definitions/basicSearch/performSearch.step.ts:33"
             },
             "result": {
               "status": "passed",
-              "duration": 64097541
+              "duration": 58791250
             }
           },
           {
@@ -119,7 +119,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 22944042
+              "duration": 20282541
             }
           }
         ],
@@ -143,7 +143,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 557207332
+              "duration": 464480125
             }
           },
           {
@@ -156,7 +156,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8332154542
+              "duration": 6648188041
             }
           },
           {
@@ -169,7 +169,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3890707415
+              "duration": 3811516707
             }
           },
           {
@@ -199,11 +199,11 @@
             "line": 18,
             "name": "the assets listed meet the search and filter criteria:",
             "match": {
-              "location": "step-definitions/basicSearch/filterSearchResults.step.ts:36"
+              "location": "step-definitions/basicSearch/filterSearchResults.step.ts:37"
             },
             "result": {
               "status": "passed",
-              "duration": 52192208
+              "duration": 44415333
             }
           },
           {
@@ -211,7 +211,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 23056875
+              "duration": 18331417
             }
           }
         ],
@@ -246,7 +246,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 541796624
+              "duration": 542398790
             }
           },
           {
@@ -259,7 +259,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 6151037917
+              "duration": 5510409916
             }
           },
           {
@@ -272,7 +272,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 22647384249
+              "duration": 22073191041
             }
           },
           {
@@ -285,7 +285,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 107003042
+              "duration": 125542999
             }
           },
           {
@@ -298,7 +298,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3482036542
+              "duration": 2598369375
             }
           },
           {
@@ -306,7 +306,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 38588583
+              "duration": 25204042
             }
           }
         ],

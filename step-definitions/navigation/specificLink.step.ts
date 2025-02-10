@@ -8,7 +8,7 @@ Given('user is on any page of the Quartex Site',{ timeout: 50000 }, async functi
     await this.page.waitForLoadState('networkidle')
         })
 
-Then('user has navigated to a Timeline content block', { timeout: 50000 }, async function () {
+Then('user has navigated to a Timeline content block', { timeout: 30000 }, async function () {
    // selects a content block and verifies navigated to correct page
     try {
         await this.helpers.clickContentBlock()
@@ -45,7 +45,7 @@ Then('the correct webpage is launched in a new tab', async function () {
         ])
     
         // Wait for the new tab to fully load
-        await newPage.waitForLoadState()
+        await newPage.waitForLoadState('domcontentloaded')
     
         // Perform actions/assertions on the new tab
         console.log(await newPage.title()) 

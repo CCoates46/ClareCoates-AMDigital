@@ -4,6 +4,7 @@ import { expect } from 'playwright/test'
 
 Given('user is on any page of the Quartex Published Site', async function () {
     await this.helpers.goto()  
+    await this.page.waitForLoadState('domcontentloaded')
     })
 
 When('user enters valid search term in the basic search input box', async function () {

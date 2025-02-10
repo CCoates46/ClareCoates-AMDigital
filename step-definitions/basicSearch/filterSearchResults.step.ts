@@ -13,6 +13,7 @@ When('user selects to filter the search results by collection', { timeout: 60000
     expect(resultsList).toBeVisible
     
     await this.search.clickCookieBanner('https://demo.quartexcollections.com/documents?returning=true')
+    await this.page.waitForLoadState('domcontentloaded')
 
     try {
         await this.search.checkCheckbox('Interwar Periodicals')
